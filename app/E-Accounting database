@@ -1,0 +1,18 @@
+============== SQL DATABASE ================
+
+create table modal (
+    id_barang serial primary key,
+    nama_barang varchar(200),
+    jumlah_barang integer,
+    satuan varchar(200),
+    harga_beli integer,
+    harga_jual integer
+);
+
+create table pembeli (
+    id_pembeli serial primary key,
+    id_ integer,
+    jumlah_belanja integer,
+    foreign key (id_) references modal(id_barang)
+);
+
